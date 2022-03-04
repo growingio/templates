@@ -1,5 +1,13 @@
 name: Continuous delivery for Node.js®
 
+on:
+  workflow_call:
+    secrets:
+      GHP_TOKEN:
+        required: true
+      NPM_AUTOMATION_TOKEN:
+        required: true
+
 jobs:
   publish-package:
     name: Publish package
